@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit your profile</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon"  type="image/png" href="i/favicon.png">
+
+	<!-- CSS first for correct pixel measuring during start -->
+	<link rel="stylesheet" type="text/css" href="css/general.css" />
+	<link rel="stylesheet" type="text/css" href="css/cw.css" />
+
+	<!-- Libs -->
+	<script src="lib/general.js"></script>
+	<script src="lib/plugins.js"></script>
+	<script src="lib/pouchdb.js"></script>
+
+	<!-- CloudWall, profile editor -->
+	<script src="cw/profile-editor-static.js"></script>
+
+</head>
+
+<body>
+	<div id="cw-notes"></div>
+	<div id="cw-body" style="width:530px" class="mt0 pt20 pb15">
+		<div id="cw-space"></div>
+	</div>
+</body>
+
+<script>
+	cw.CW = {};
+	$(function(){ 
+    $.extend(cw.CW, ({	
+	
+	title:						'CloudWall 2.4.4',
+	logo:							'logo.svg',									// Logo URL or URL data String
+	titleColor:				'#76b4ed',									// Title preferred color
+	appRepos:					['cw'],											// Sources of apps/components available for all attached DBs
+	appDefault:				'cw/Sys.Hub',								// Default app, which starts on empty path or click on logo	
+	appUpdateURL:			'cw/apps.json',							// External location of app updates
+  static:						true,												// true for non-Couch hosted build
+  storageSalt:			'',													// Salt for creating local buckets, allows to avoid intersections
+  																							// between equally named local buckets in different projects.
+  
+  // Profile 
+  
+  profileTemplate:	'profile.json',							// External profile template or prfile template object
+  profile:					'cw/cw',										// Profile location or profile itself as an onject
+	profileWritable:	true,												// Enables/disables profile mod by user
+  
+  // ACL
+  
+	acl:[{
+    dbs:		['*'], 
+    roles:	['*'], 
+    users:	['*'], 
+    apps:		['*'], 
+    types:	{'*':['*']}
+  }],
+	
+	slotTimeout:					5000,										// Default slot start timeout
+	
+	pluginSetDoc:					'cw-Sys-Plugins-4vx1',	// Doc _id in cw bucket, holding locally available libs
+	
+	syncRestart:					21000,									// Sync restart on fail interval, ms
+	batchSize:						20,											// Sync batch size
+	
+	// CloudWall config
+	
+	$body:								"#cw-body",							// body, real $ obj will be mounted here
+	$upic:								"#cw-upic",							// userpic selector
+	$notes:								"#cw-notes",						// sys msg container
+	minBodyWidth:					1200,										// min body width, px
+	margins:							40,											// desired outer margins around body
+
+	$space:								"#cw-space",						// slots and panes container
+	defaultSpaceWidth:		1200,										// default width of work area
+
+	$slots:								"#cw-slots",						// app slots container
+	$nav:									"#cw-header",						// dock app container
+	appNav:								"cw.Sys.Dock",					// manifest id of dock app
+	appTrust:							"cw.Sys.Trust",					// trust modal app
+
+	slotCloseTimeout:				60,										// Timeout before slot started closing and forced to close
+	slotLayoutDelay:				110,									// Delay slot state changed and slot re-layout fired
+	slot:	'<div class="cw-app"></div>',						// Slot default HTML container
+
+	appToUrlTrackerDebounce:150,									// Delay after app state change and CW reflected it in URL
+	urlObserverInterval:		333,									// Delay after URL hash change and CW start processing it
+	readStateSaverInterval:	5000,									// How often info about read revisions stored to cw bucket
+	dbWatchersDebounce:			5,										// DB events jitter suspend interval
+	
+	dbConnTimeout:					30000,								// max timeslot for bucket connection
+	gcAttsInterval:					600000,								// ttl of freed attachments in cache	
+  
+  appNameMask:						/^[A-Z][A-Za-z0-9]{1,24}(\.[A-Za-z0-9]{1,25}){0,4}$/, // Allowed URL app names mask
+	
+}));
+    cw.login(); 
+  });
+</script>
+</html>
