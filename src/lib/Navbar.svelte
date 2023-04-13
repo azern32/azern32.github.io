@@ -33,9 +33,9 @@
         <div
           class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
           {showMenu ? 'flex' : 'hidden'}">
-            <a class="text-gray-800 hover:text-blue-400" href="/home">Projects</a>
-            <a class="text-gray-800 hover:text-blue-400" href="/about">Who am I</a>
-            <a class="text-gray-800 hover:text-blue-400" href="/contact">Contact Me</a>
+            <a class="text-gray-800 hover:text-blue-400" href="#home">Projects</a>
+            <a class="text-gray-800 hover:text-blue-400" href="#about">Who am I</a>
+            <a class="text-gray-800 hover:text-blue-400" href="#contact">Contact Me</a>
         </div>
       </nav>
     </div>
