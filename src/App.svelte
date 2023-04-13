@@ -1,11 +1,11 @@
 <script>
   import "./app.css";
+  import Navbar from "./lib/Navbar.svelte";
 </script>
 
 <main>
-  <h1 class="bg-red-300">
-    wahaha
-  </h1>
+  <Navbar/>
+
 </main>
 
 <style>
