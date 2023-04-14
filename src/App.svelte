@@ -8,7 +8,7 @@
   <Navbar/>
   
   <!-- Projects List Section -->
-  <div class="flex flex-wrap justify-center">
+  <div class="flex flex-wrap justify-evenly lg:justify-start">
     <Projects 
       gameName="Tembak-tembak" 
       idTag="1stwah" 
