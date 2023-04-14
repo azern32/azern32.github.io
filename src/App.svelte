@@ -1,11 +1,13 @@
 <script>
   import "./app.css";
+  import Game from "./lib/Game.svelte";
   import Navbar from "./lib/Navbar.svelte";
   import Projects from "./lib/Projects.svelte";
 </script>
 
-<main>
-  <Navbar/>
+<Navbar/>
+<main >
+  <Game />
   
   <!-- Projects List Section -->
   <div class="flex flex-wrap justify-evenly lg:justify-start">
@@ -18,6 +20,9 @@
       gameName="Lari-lari"
       idTag="2ndwah"
       imageLink="https://cdn.donmai.us/original/a6/18/__hatsune_miku_vocaloid_drawn_by_sofra__a6185943790b04e39889bf297207abed.jpg"
+    />
+    <Projects 
+      idTag="2ndwah"
     />
   </div>
 
