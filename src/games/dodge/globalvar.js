@@ -1,4 +1,4 @@
-import { Ticker, Renderer, Container } from "pixi.js";
+import { Ticker, Renderer, Container, Rectangle } from "pixi.js";
 
 
 let renderer = new Renderer({
@@ -8,6 +8,10 @@ let renderer = new Renderer({
     width: innerWidth
 })
 let ticker = new Ticker()
+
 let gameContainer = new Container()
+gameContainer.interactive = true
+gameContainer.hitArea = new Rectangle(0, 0, screen.width, screen.height);
+
 
 export {renderer, gameContainer, ticker}

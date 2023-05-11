@@ -1,15 +1,22 @@
 import {gameContainer, renderer, ticker} from "./globalvar";
+import {square} from './player';
 
-// console.log(gameContainer);
-// console.log(renderer);
-// console.log(ticker); 
+gameContainer.addChild(square)
+
 
 ticker.add(function(delta){
     renderer.render(gameContainer)
+    gameContainer.children[0].rotation += delta * .01
 })
 
 ticker.start()
-
-console.log(document.getElementById('game'));
-console.log(document.body);
 export { renderer }
+
+gameContainer.onpointerdown = (e) => {
+    console.log(e);
+}
+
+gameContainer.onpointermove = (e) =>{
+    square.position.set(e.global.x, e.global.y)
+    // console.log(e.global);
+}

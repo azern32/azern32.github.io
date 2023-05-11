@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
 
     onMount(()=>{
-        console.log(document.getElementById('game'));
+        // console.log(document.getElementById('game'));
         // @ts-ignore
         document.getElementById('game').appendChild(renderer.view)
     })
