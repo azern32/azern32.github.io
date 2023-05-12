@@ -10,8 +10,12 @@ let renderer = new Renderer({
 let ticker = new Ticker()
 
 let gameContainer = new Container()
-gameContainer.interactive = true
+gameContainer.eventMode = 'static'
 gameContainer.hitArea = new Rectangle(0, 0, screen.width, screen.height);
 
 
-export {renderer, gameContainer, ticker}
+let gravity = 10;
+let sideGravity = .05;
+
+
+export {renderer, gameContainer, ticker, gravity, sideGravity}

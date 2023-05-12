@@ -1,22 +1,27 @@
 import {gameContainer, renderer, ticker} from "./globalvar";
-import {square} from './player';
+import {player} from './player';
+import { fall2side } from "./physic";
+import { Graphics } from "pixi.js";
 
-gameContainer.addChild(square)
+gameContainer.addChild(player)
 
 
 ticker.add(function(delta){
     renderer.render(gameContainer)
-    gameContainer.children[0].rotation += delta * .01
+    // gameContainer.children[0].rotation += delta * .01
 })
 
 ticker.start()
 export { renderer }
 
 gameContainer.onpointerdown = (e) => {
-    console.log(e);
+    console.log(player.fall2side());
 }
 
-gameContainer.onpointermove = (e) =>{
-    square.position.set(e.global.x, e.global.y)
-    // console.log(e.global);
-}
+gameContainer.addEventListener('pointertap', (e)=>{
+    player.position.copyFrom(e.global)
+})
+
+// gameContainer.onpointermove = (e) =>{
+//     square.position.set(e.global.x, e.global.y)
+// }
