@@ -10,7 +10,7 @@
   <Game />
   
   <!-- Projects List Section -->
-  <div class="flex flex-wrap justify-evenly lg:justify-start">
+  <!-- <div class="flex flex-wrap justify-evenly lg:justify-start">
     <Projects 
       gameName="Tembak-tembak" 
       idTag="1stwah" 
@@ -24,7 +24,7 @@
     <Projects 
       idTag="2ndwah"
     />
-  </div>
+  </div> -->
 
   <!-- About Me -->
   <div>

@@ -13,7 +13,7 @@
           <a
             class="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400"
             href="/home">
-            Azern32 a.k.a Weebslime
+            Game menghindar
           </a>
           <!-- Mobile menu button -->
           <!-- svelte-ignore a11y-click-events-have-key-events -->

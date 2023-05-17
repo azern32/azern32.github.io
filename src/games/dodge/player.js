@@ -1,9 +1,11 @@
 import { Graphics } from "pixi.js";
 
 class Entity extends Graphics {
-    fall2side(){
-        return 0
+    fall2side(xRef){ // cuma kembalikan positif atau negatif
+        return this.x < xRef ? -1 : 1
     }
+    speed = 0
+    accel = 0
 }
 
 const player = new Entity();
@@ -20,9 +22,8 @@ player.endFill();
 player.pivot.set(0, player.height/2)
 player.x = screen.width /2
 player.y = screen.height /2
-
-player['speed'] = 0;
-player['accel'] = 0;
+player.accel = 3
+player.speed =+ player.accel
 
 
 export {player}

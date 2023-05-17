@@ -14,12 +14,14 @@ ticker.add(function(delta){
 ticker.start()
 export { renderer }
 
-gameContainer.onpointerdown = (e) => {
-    console.log(player.fall2side());
-}
+// gameContainer.onpointerdown = (e) => {
+//     console.log(player.fall2side());
+// }
 
 gameContainer.addEventListener('pointertap', (e)=>{
-    player.position.copyFrom(e.global)
+    // player.position.copyFrom(e.global)
+    console.log(player.fall2side(e.globalX));
+    console.log(e.global);
 })
 
 // gameContainer.onpointermove = (e) =>{
