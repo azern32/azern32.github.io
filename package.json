@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npx gh-pages -d dist"
@@ -20,6 +21,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "gh-pages": "^5.0.0",
+    "pixi-filters": "^5.2.1",
     "pixi.js": "^7.2.4"
   }
 }

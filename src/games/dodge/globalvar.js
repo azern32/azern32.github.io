@@ -1,5 +1,11 @@
+import { GlitchFilter } from "pixi-filters";
 import { Ticker, Renderer, Container, Rectangle } from "pixi.js";
 
+
+const glitch = new GlitchFilter({
+    seed:.4,
+    slices:25
+})
 
 let renderer = new Renderer({
     antialias:true,
@@ -18,4 +24,4 @@ let gravity = 10;
 let sideGravity = .05;
 
 
-export {renderer, gameContainer, ticker, gravity, sideGravity}
+export {renderer, gameContainer, ticker, gravity, sideGravity, glitch}

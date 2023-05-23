@@ -1,29 +1,33 @@
+import { gameover } from "./gameover";
 import {gameContainer, renderer, ticker} from "./globalvar";
 import {player} from './player';
-import { fall2side } from "./physic";
-import { Graphics } from "pixi.js";
 
 gameContainer.addChild(player)
-
+gameContainer.addChild(gameover)
 
 ticker.add(function(delta){
     renderer.render(gameContainer)
+    player.accelerate(window.innerWidth / 2, 1)
+    player.x += player.speed
+
+
+
+    // console.log(Math.abs(Math.cos(temp)) * 15);
     // gameContainer.children[0].rotation += delta * .01
 })
 
 ticker.start()
 export { renderer }
 
-// gameContainer.onpointerdown = (e) => {
-//     console.log(player.fall2side());
-// }
-
-gameContainer.addEventListener('pointertap', (e)=>{
-    // player.position.copyFrom(e.global)
-    console.log(player.fall2side(e.globalX));
+gameContainer.onpointerdown = (e) => {
     console.log(e.global);
-})
+    console.log(player.speed);
 
-// gameContainer.onpointermove = (e) =>{
-//     square.position.set(e.global.x, e.global.y)
-// }
+
+    player.accelerate(e.globalX, -80)
+}
+
+// gameContainer.addEventListener('pointermove', (e)=>{
+//     ticker.stop()
+//     // player.position.copyFrom(e.global)
+// })
