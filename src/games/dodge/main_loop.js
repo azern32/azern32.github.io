@@ -1,9 +1,11 @@
+import { RGBSplitFilter } from "pixi-filters";
 import { gameover } from "./gameover";
 import {gameContainer, renderer, ticker} from "./globalvar";
 import {player} from './player';
 
 gameContainer.addChild(player)
 gameContainer.addChild(gameover)
+
 
 ticker.add(function(delta){
     renderer.render(gameContainer)
