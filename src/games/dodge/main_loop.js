@@ -26,7 +26,7 @@ gameContainer.onpointerdown = (e) => {
     console.log(player.speed);
 
 
-    player.accelerate(e.globalX, -80)
+    player.accelerate(e.globalX, -50)
 }
 
 // gameContainer.addEventListener('pointermove', (e)=>{
