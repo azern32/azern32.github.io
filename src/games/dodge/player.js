@@ -1,5 +1,6 @@
 import { Graphics } from "pixi.js";
 import { gravity, sideGravity } from "./globalvar";
+import { OutlineFilter } from "pixi-filters";
 
 class Entity extends Graphics {
     speed = 0
@@ -30,6 +31,8 @@ player.pivot.set(0, player.height/2)
 player.x = screen.width /2
 player.y = screen.height /2
 
+
+player.filters = [new OutlineFilter()]
 
 export {player}
 

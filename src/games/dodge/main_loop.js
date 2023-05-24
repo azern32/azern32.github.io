@@ -9,8 +9,9 @@ gameContainer.addChild(gameover)
 
 ticker.add(function(delta){
     renderer.render(gameContainer)
-    player.accelerate(window.innerWidth / 2, 1)
+    player.accelerate(window.innerWidth / 2, delta)
     player.x += player.speed
+
 
 
 
