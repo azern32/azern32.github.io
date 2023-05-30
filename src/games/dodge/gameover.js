@@ -1,4 +1,4 @@
-import { Sprite } from "pixi.js";
+import { Sprite, Text, TextStyle } from "pixi.js";
 
 
 const gameover = Sprite.from('/images/gameover.png')
