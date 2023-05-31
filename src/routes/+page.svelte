@@ -1,4 +1,6 @@
 <script>
+    
+    
     async function getAllFake() {
         const res = await fetch('https://jsonplaceholder.typicode.com/todos/2').then(response => {return response.json()});
         return await res
@@ -9,7 +11,13 @@
 
 
     export let data
-    console.log(data);
+    let {todos} = data
+    console.log(data.todos);
 </script>
 
-<h1>{getAllFake()}</h1>
+<ul>
+    {#each todos as item}
+        <li id={item.id}>{item.title}</li>
+         <!-- content here -->
+    {/each}
+</ul>

@@ -1,11 +1,32 @@
-import { listTodo } from "$lib/server/todo";
+import { prisma } from "$lib/server/prisma.db";
+// import { listTodo } from "$lib/server/todo";
 
-export const load = async function(){
-    const data = await listTodo.find().toArray()
 
-    console.log('daata di page.server ', data);
+// async function getdata() {
+//     return await listTodo.find().toArray()
+// }
+
+// let perubahan = listTodo.watch()
+// perubahan.on('change', async (changeEvent) => {
+//     console.log(changeEvent);
+// })
+
+
+export const load = async function(event){
+
+    let data = event.locals.data
+
+    /** Kalo ini untuk pake mongo */
+    // data = await getdata()
+    // data = JSON.parse(JSON.stringify(data))
+
+
+    /** Yang ini pake prisma */
+    // data = await prisma.user.findMany()
+
 
     return {
-        todos: data
+        todos: JSON.parse(data),
     }
+
 }
