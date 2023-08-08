@@ -1,5 +1,6 @@
 <script>
 	import Hero from '../components/content/Hero.svelte';
+	import LovedStacks from '../components/content/LovedStacks.svelte';
 	import MainContent from '../components/content/MainContent.svelte';
 	import Drawer from '../components/drawer/Drawer.svelte';
 	import SidebarItems from '../components/drawer/SidebarItems.svelte';
@@ -18,5 +19,6 @@
 	</Navbar>
 	<MainContent>
 		<Hero />
+		<LovedStacks />
 	</MainContent>
 </Drawer>
