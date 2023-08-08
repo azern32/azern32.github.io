@@ -18,10 +18,5 @@
 	</Navbar>
 	<MainContent>
 		<Hero />
-		<div>sayaa</div>
-		<div>sayaa</div>
-		<div>sayaa</div>
-		<div>sayaa</div>
-		<div>sayaa</div>
 	</MainContent>
 </Drawer>

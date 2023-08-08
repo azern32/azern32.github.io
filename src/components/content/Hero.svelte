@@ -1,13 +1,10 @@
-<div class="hero bg-cover" style="background-image: url(/hero.jpg);">
-	<div class="hero-overlay bg-opacity-60" />
-	<div class="hero-content text-center text-neutral-content">
-		<div class="max-w-md">
-			<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-			<p class="mb-5">
-				Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-				quasi. In deleniti eaque aut repudiandae et a id nisi.
-			</p>
-			<button class="btn btn-primary">Get Started</button>
+<div class="hero justify-start">
+	<div class="hero-content flex-col md:flex-row">
+		<img alt="should be me" src="/hero.jpg" class="max-w-sm" />
+		<div>
+			<h1 class="text-3xl font-bold">Hello!</h1>
+			<h1 class="text-5xl font-bold">I am WeebSlime</h1>
+			<p class="py-6">A front-end heavy fullstack web developer</p>
 		</div>
 	</div>
 </div>
