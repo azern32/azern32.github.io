@@ -2,5 +2,5 @@
 	import LinkedButton from './LinkedButton.svelte';
 </script>
 
-<LinkedButton href="#" title="saya" />
-<LinkedButton href="#" title="dia" />
+<LinkedButton href="about" title="about" />
+<LinkedButton href="stacks" title="loved stacks" />

@@ -1,5 +1,5 @@
 <div class="card card-side p-4">
-	<div class="card-header bg-slate-500">
+	<div class="card-header bg-slate-500 pt-8">
 		<div class="card-title -rotate-90 bottom-0">judul</div>
 	</div>
 	<div class="card-body">
