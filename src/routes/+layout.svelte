@@ -4,7 +4,7 @@
 	import Navbar from '../components/navbar/Navbar.svelte';
 </script>
 
-<div class="container mx-auto">
+<div class="container mx-auto max-w-2xl">
 	<Navbar>
 		<LinkedButton title="About" href="about" />
 		<LinkedButton title="Stacks" href="stacks" />

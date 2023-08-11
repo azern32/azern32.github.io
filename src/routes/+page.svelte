@@ -1,9 +1,10 @@
 <script>
-	import Hero from '../components/content/Hero.svelte';
-	import Section from '../components/content/Section.svelte';
+	import Hero from '../components/general/Hero.svelte';
+	import Section from '../components/general/Section.svelte';
+	import TechThumb from '../components/general/TechThumb.svelte';
 </script>
 
-<Hero />
+<!-- <Hero /> -->
 <Section title="About me" id="about">
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi labore debitis sapiente
 	harum cum, numquam eaque voluptates obcaecati quas odit cupiditate veritatis consequatur id
@@ -19,4 +20,6 @@
 	doloribus qui ea, quae, veritatis in unde amet dolore perferendis nesciunt ipsa quia nulla harum!
 	Nam, nostrum sit!
 </Section>
-<Section title="Also able to do..." id="skills" />
+<Section title="Also able to do..." id="skills">
+	<TechThumb iconLink="/hero.jpg" nameLink="Maintenance" />
+</Section>
