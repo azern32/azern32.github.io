@@ -1,4 +1,5 @@
 <script>
+	import Canvas from '../components/games/Canvas.svelte';
 	import Hero from '../components/general/Hero.svelte';
 	import Section from '../components/general/Section.svelte';
 	import TechThumb from '../components/general/TechThumb.svelte';
@@ -22,4 +23,8 @@
 </Section>
 <Section title="Also able to do..." id="skills">
 	<TechThumb iconLink="/hero.jpg" nameLink="Maintenance" />
+</Section>
+
+<Section title="Mestinya isinya game" id="game">
+	<Canvas />
 </Section>
